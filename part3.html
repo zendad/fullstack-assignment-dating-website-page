@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dating Website</title>
+	<meta name="author" content="Dereck Zenda">
+	<style type="text/css">
+	fieldset{ background:lightyellow;
+			  border:yellow 10px solid;
+			  width:720px;
+			  margin-bottom:10px;
+			}
+	label.mylabels{width: 180px;
+		  display:inline-block;
+		  text-align: right;
+		}
+	input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 300px;
+	}
+	input[type=range]::-webkit-slider-runnable-track {
+	    width: 300px;
+	    height: 5px;
+	    background: #ddd;
+	    border: none;
+	    border-radius: 3px;
+	}
+	input[type=range]::-webkit-slider-thumb {
+	    -webkit-appearance: none;
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	    margin-top: -4px;
+	}
+	input[type=range]:focus {
+	    outline: none;
+	}
+	input[type=range]:focus::-webkit-slider-runnable-track {
+	    background: #ccc;
+	}
+	input[type=range]::-moz-range-track {
+	    width: 300px;
+	    height: 5px;
+	    background: #ddd;
+	    border: none;
+	    border-radius: 3px;
+	}
+	input[type=range]::-moz-range-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	}
+	input[type=range]:-moz-focusring{
+	    outline: 1px solid white;
+	    outline-offset: -1px;
+	}
+
+	input[type=range]::-ms-track {
+	    width: 300px;
+	    height: 5px;
+	    background: transparent;
+	    border-color: transparent;
+	    border-width: 6px 0;
+	    color: transparent;
+	}
+	input[type=range]::-ms-fill-lower {
+	    background: #777;
+	    border-radius: 10px;
+	}
+	input[type=range]::-ms-fill-upper {
+	    background: #ddd;
+	    border-radius: 10px;
+	}
+	input[type=range]::-ms-thumb {
+	    border: none;
+	    height: 16px;
+	    width: 16px;
+	    border-radius: 50%;
+	    background: goldenrod;
+	}
+	input[type=range]:focus::-ms-fill-lower {
+	    background: #888;
+	}
+	input[type=range]:focus::-ms-fill-upper {
+	    background: #ccc;
+	}
+	label.mytext{text-align:center;
+		background-color: brown;}
+	label.mytext2{text-align:center;
+		background-color: purple;}
+	textarea{width:360px ;
+		height:50px;}
+	label:hover { font-size:40px }
+	</style>
+</style>
+</head>
+<body>
+	<h1>Please Enter Your Details For Our Dating Website!</h1>
+	<form>
+		<fieldset>
+			<legend>Your Face</legend>
+			<label class="mylabels" for="avatar">Your Image:</label><input type="file" name="imageName" accept="image/gif, image/jpeg, image/png" required><br>
+			<label class="mylabels">Image Preview:</label> <img id="preview">
+		</fieldset><br>
+		<fieldset>
+			<legend class="mylabels">Your General Details</legend>
+			<label class="mylabels">Name:</label> <input type="text" name="fullName" value="Your Full Name" required><br>
+			<label class="mylabels">Gender:</label> <input type="radio" name="gender" value="Male"><label>Male</label> <input type="radio" name="gender" value="Female"><label>Female</label><br>
+			<label class="mylabels">Age:</label> <input type="number" size="6" name="age" min="18" max="120" value="18" required><br>
+			<label class="mylabels">Date of Birth:</label> <input type="date" name"dateOfBirth" required><br>
+			<label class="mylabels">Favorite Color:</label> <input type="color" name"favColor"><br>
+			<label class="mylabels">Which Country:</label> <select>   <option value="zx"></option>
+									  <option value="zw">Zimbabwe</option>
+									  <option value="za">South Africa</option>
+									  <option value="en">England</option>
+									  <option value="zm">Zambia</option>
+									  <option value="cm">Cameroon</option></select>	
+		</fieldset><br>
+		<fieldset>
+			<legend>Your Indicators</legend>
+			<label class="mylabels">Height:</label> <label class="mytext">Short</label> <input type="range" name="height" min="0" max="100"> <label class="mytext2">Tall</label><br>
+			<label class="mylabels">Salary:</label> <label class="mytext">Poor</label> <input type="range" name="salary" min="0" max="100"> <label class="mytext2">Rich</label>
+		</fieldset><br>
+		<fieldset>
+			<legend class="mylabels">Your Contact information</legend>
+			<label class="mylabels">Email:</label> <input type="email" name="email" required><br>
+			<label class="mylabels">Mobile:</label> <input type="tel" name="mobile" required><br>
+			<label class="mylabels">Address:</label><textarea></textarea><br>
+			<label class="mylabels">Method to contact you:</label> <input type="checkbox" name="mcontact"> <label>Email</label> <input type="checkbox" name="mcontact"> <label>Whatsapp</label> <input type="checkbox" name="mcontact"> <label>In-app-chat</label>
+		</fieldset><br>
+		<input type="submit" name="submitButton">
+	</form>
+<script src="https://www.cse.ust.hk/~rossiter/dating_web_site.js"></script>
+</body>
+</html>
